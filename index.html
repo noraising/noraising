@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Nora Ising</title>
+</head>
+<body>
+    <h1>Herzlich Willkommen!</h1>
+    <p>"Die Grenzen des Obstes liegen im Auge des Betrachters."- Mutter eines Juweliers</p>
+
+    <a href="Projekte.html" style="padding:10px; background-color:lightblue; text-decoration:none;">Meine Bücher und Werke</a>
+<a href="Kontakt.html" style="padding:10px; background-color:lightgreen; text-decoration:none;">Kontakt</a>
+<a href="Leistungen.html" style="padding:10px; background-color:lightgreen; text-decoration:none;">Leistungen</a> 
+ <a href="KurzeEinblicke.html" style="padding:10px; background-color:lightgreen; text-decoration:none;">Kurze Einblicke</a> 
+<a href="NewsundBlog.html" style="padding:10px; background-color:lightgreen; text-decoration:none;">News und Blog</a>
+<a href="Übermich.html" style="padding:10px; background-color:lightgreen; text-decoration:none;">Über mich</a>
+  <p>&nbsp;</p>
+
+  <style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.carousel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.carousel-item {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+</style>
+</head>
+<body>
+
+<div class="carousel">
+    <div class="carousel-item">Info 1</div>
+    <div class="carousel-item">Info 2</div>
+    <div class="carousel-item">Info 3</div>
+</div>
+
+<script>
+let items = document.querySelectorAll('.carousel-item');
+let index = 0;
+
+setInterval(() => {
+    items.forEach((item, i) => {
+        item.style.transform = `translateX(${-index*220 + i*220}px)`;
+    });
+    index++;
+    if(index >= items.length) index = 0;
+}, 2000);
+</script>
+
+  <p>&nbsp;</p>
+  
+
+</body>
+  
