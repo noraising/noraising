@@ -39,6 +39,29 @@
   <a href="datenschutz.html" style="color: white; text-decoration: none; margin: 0 15px;">Datenschutz</a>
   </nav> 
  </style>
+
+ <style>.slider {
+  position: relative;
+  width: 80%;
+  margin: 100px auto 0 auto;
+  overflow: hidden;
+  height: 250px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  font-size: 1.3em;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slide.active {
+  opacity: 1;
+}
+</style>
  
 
 </head>
@@ -47,15 +70,27 @@
   <h1>Herzlich Willkommen!</h1>
   <h2>"Die Grenzen des Obstes liegen im Auge des Betrachters." - Mutter eines Juweliers</h2>
 
-  <p><a href="gedichte.html">News und kurze Werke</a></p>
-  <p><a href="meinebuecher.html">Meine Werke</a></p>
-  <p><a href="uebermich.html">Über mich</a></p>
-  <p><a href="leistungen.html">Leistungen</a></p>
-  <p><a href="kontakt.html">Kontakt</a></p>
-  <p><a href="impressum.html">Impressum</a></p>
-  <p><a href="datenschutz.html">Datenschutz</a></p>
-
- <br> <br> <br> 
+ <div class="slider">
+  <div class="slide active">
+    <h2>Über mich</h2>
+    <p>Ich heiße Nora Ising und bin eigens publizierende Schriftstellerin der modernden und zeitgenössischen Belletristik.<br> 
+ Meine zwei Werke sind bereits online erhältlich, siehe unter "Meine Werke". <br>
+ Genauere Informationen zu mir sind unter dem Button "Kontakt" aufzufinden, wie man sich wohl denken kann. <br>
+ Wenn jemand Kontakt zu mir aufnehmen will, dann findet er die nötigen Informationen unter "Über mich", wie man sich vermutlich auch denken kann. <br>
+ Man sollte sich niemals verwirren lassen.</p>
+  </div>
+  <div class="slide">
+    <h2>Meine Tätigkeiten</h2>
+    <p>Ich bin Schriftstellerin und Denkerin, letzteres eigentlich eher, aber ich schreibe auch gerne. <br>
+Da ich mich bevorzugt in intellektuellen Höhen bewege, bitte ich die Personen, die sich dazu nicht in der Lage sehen oder kein Interesse an einer solchen Beschäftigung haben, meine Website zu verlassen und trotzdem meine Bücher zu kaufen, denn Geld nehme ich immer gerne.</p>
+  </div>
+  <div class="slide">
+    <h2>Mein Team</h2>
+    <p>Kein Mensch kann alleine erfolgreich sein, abgesehen von mir. <br>
+Ich habe kein Team und bin sehr froh darüber, da mir die meisten Menschen nur üble Darmreizungen bescheren. <br> 
+  Wenn DU denkst, dass du von anderer Beschaffenheit bist, dann lass doch gerne ein bisschen Geld bei mir und unterstütze mich anhand hilfreicher Kritik.</p>
+  </div>
+</div>
 
  <h2>Nora Ising</h2>
 Ein Zusammenspiel zwischen Herz und Verstand im menschlichen Korpus ist nur äußerst selten aufzufinden, die letzte Entdeckung machten Wissenschaftler gar 1978, doch der vermeintliche "Mensch" stellte sich leider als ein äußerst raffiniert verkleideter Grashüpfer bei einer Faschingsparty heraus, so ein Pech! <br> 
@@ -63,23 +98,7 @@ Ein Zusammenspiel zwischen Herz und Verstand im menschlichen Korpus ist nur äu�
  Freue dich und lass doch gleich ein bisschen Geld da! <br>
  <br> <br> <br> <br> <br> <br> 
 
-<p><h3>Über mich</h3>
-Ich heiße Nora Ising und bin eigens publizierende Schriftstellerin der modernden und zeitgenössischen Belletristik.<br> 
- Meine zwei Werke sind bereits online erhältlich, siehe unter "Meine Werke und Verkäufe". <br>
- Genauere Informationen zu mir sind unter dem Button "Kontakt" aufzufinden, wie man sich wohl denken kann. <br>
- Wenn jemand Kontakt zu mir aufnehmen will, dann findet er die nötigen Informationen unter "Über mich", wie man sich vermutlich auch denken kann. <br>
- Man sollte sich niemals verwirren lassen. </p>
 
- <p><h3>Meine Tätigkeiten</h3>
-Ich bin Schriftstellerin und Denkerin, letzteres eigentlich eher, aber ich schreibe auch gerne. <br>
-Da ich mich bevorzugt in intellektuellen Höhen bewege, bitte ich die Personen, die sich dazu nicht in der Lage sehen oder kein Interesse an einer solchen Beschäftigung haben, meine Website zu verlassen und trotzdem meine Bücher zu kaufen, denn Geld nehme ich immer gerne. </p>
-
- <p><h3>Mein Team</h3>
-Kein Mensch kann alleine erfolgreich sein, abgesehen von mir. <br>
-Ich habe kein Team und bin sehr froh darüber, da mir die meisten Menschen nur üble Darmreizungen bescheren. <br> 
-  Wenn DU denkst, dass du von anderer Beschaffenheit bist, dann lass doch gerne ein bisschen Geld bei mir und unterstütze mich anhand hilfreicher Kritik. </p>
-
- <br> <br> <br> <br> <br> 
 
  <p><h2>Arbeitet mit mir lieber nicht</h2>
   In eurem eigenen Interesse. <br>
@@ -88,6 +107,17 @@ Ich habe kein Team und bin sehr froh darüber, da mir die meisten Menschen nur �
   Stattdessen könnt ihr euch umfassend über neutrale Hüte informieren und wenn ihr dann merkt, wie unfassbar langweilig das ist, gerne zu mir zurückkehren. <br>
   Viel Vergnügen!!! </p>
  
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 4000); // alle 4 Sekunden wechseln
+</script>
  
- 
+</body>
+</html>
 
