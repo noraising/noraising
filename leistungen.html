@@ -30,6 +30,33 @@
       cursor: pointer;
     }
   </style>
+
+ <title>Zwei Spalten Layout</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .column {
+      flex: 1;
+      text-align: center;
+    }
+
+    .column img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .column p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #333;
+    }
+  </style>
 </head>
 
  <body>
@@ -44,7 +71,17 @@
   <a href="datenschutz.html" style="color: white; text-decoration: none; margin: 0 15px;">Datenschutz</a>
   </nav> 
 
+  <div class="container">
+    <div class="column">
+      <img src="https://raw.githubusercontent.com/noraising/noraising/main/2025719-190017.jpg" alt="Bild 1">
+      <p>Das ist der Text unter dem ersten Bild. Du kannst hier alles schreiben, was du möchtest.</p>
+    </div>
+    <div class="column">
+      <img src="https://raw.githubusercontent.com/noraising/noraising/main/20250816_155523.jpg" alt="Bild 2">
+      <p>Und hier ist der Text unter dem zweiten Bild. Auch dieser Text ist frei gestaltbar.</p>
+    </div>
+  </div>
  
 
-</head>
+
 
