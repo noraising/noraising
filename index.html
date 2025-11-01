@@ -8,6 +8,31 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Background</title>
+
+ <meta charset="UTF-8">
+  <title>Verblassendes Gedicht</title>
+  <style>
+   body {
+      background-color: #f5f5f5;
+      font-family: Georgia, serif;
+    }
+
+    .gedicht {
+      color: #0033cc; /* Intensives Blau */
+      font-size: 1.6em;
+      text-align: center;
+      margin-top: 100px;
+      animation: verblassen 20s infinite ease-in-out;
+    }
+    
+
+    @keyframes verblassen {
+      0%   { opacity: 1; }
+      40%  { opacity: 0; }
+      60%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
 <style>
  body { 
   background-image: url('https://raw.githubusercontent.com/noraising/noraising/main/art-institute-of-chicago--LdzOeq7-IU-unsplash.jpg');
@@ -77,7 +102,8 @@
   <h2>"Die Grenzen des Obstes liegen im Auge des Betrachters." - Mutter eines Juweliers</h2>
  <br> <br> <br>
  <br> <br> <br>
-<i>Die Farben der Sehnsucht <br> <br>
+ <div class="gedicht">
+<p><i>Die Farben der Sehnsucht <br> <br>
 Blau schimmert der Nebel über den Giebeln <br>
 Fröhliche Stimmen singen von fern <br>
 dunkel der Himmel und ich bin am Grübeln <br>
@@ -91,7 +117,7 @@ frei von dem Schmerz der vergehenden Zeit <br> <br>
 Doch mein Fluss ward ein Opfer der Dürre <br> 
 Und jetzt gibt es keinen Weg mehr zurück <br> 
 Der Kahn der Gedanken treibt in die Irre <br>
-und ich verliere ihn aus dem Blick </i><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+und ich verliere ihn aus dem Blick </i></p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
 
  <div class="slider" style="background-color: #1e3a8a; color: #f0f0f0;">
